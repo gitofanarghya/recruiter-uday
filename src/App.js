@@ -34,7 +34,7 @@ const styles = theme => ({
 class App extends Component {
 
   state = {
-    set: 6,
+    set: 1,
     namee: "",
     contact: ""
   }
@@ -79,11 +79,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          {this.state.set === 6 ?
-
-          <Set6 handleChange={this.handleChange} setSet={this.setSet} name={this.state.name} />
-            
-          : this.state.set === 1 ? 
+          {this.state.set === 1 ? 
           
           <Set1 setSet={this.setSet}/>
 
@@ -97,7 +93,7 @@ class App extends Component {
 
           : this.state.set === 4 ?
 
-          <Set4 handleChange1={this.handleChange1} sub={this.sub}/>
+          <Set4 handleChange={this.handleChange} handleChange1={this.handleChange1} sub={this.sub}/>
 
           : 
           
@@ -116,6 +112,19 @@ const Set4 = (props) => (
   </Typing>
 	  <form onSubmit={() => props.sub()}>
     <label>
+      <p>Enter your name</p> 
+      <TextField classes
+	  className={classes.textField}
+          id="outlined-error"
+          label="namee"
+          defaultValue="Name"
+          className={classes.textField}
+	  onChange={props.handleChange}
+          margin="normal"
+          variant="outlined"
+      />
+    </label>
+    <label>
       <p>Enter your phone number</p> 
       <TextField classes
 	  className={classes.textField}
@@ -128,6 +137,7 @@ const Set4 = (props) => (
           variant="outlined"
       />
     </label>
+    <p><input type="submit" value="Submit" /></p>
   </form>
 </div>
 

@@ -3,6 +3,7 @@ import Typing from 'react-typing-animation';
 import Sound from 'react-sound';
 import soundfile from './1e1513ec-c137-4156-a19c-aeca72ea285f.wav';
 import Delayed from './Delayed';
+import {Button} from '@material-ui/core'
 
 class Set1 extends React.Component{
     render(){
@@ -23,11 +24,11 @@ class Set1 extends React.Component{
 		</Typing>
 	     <Delayed waitBeforeShow={4000}>
 		 <div>
-		    <p> <input type="radio" onClick={() => this.props.setSet(2)}/> By becoming fucking rich</p>
-                    <Delayed waitBeforeShow={1000}><p> <input type="radio" onClick={() => this.props.setSet(2)}/> By becoming the best of the best</p></Delayed>
-                    <Delayed waitBeforeShow={2000}><p> <input type="radio" onClick={() => this.props.setSet(2)}/> Like a fucking BOSS</p></Delayed>
-                    <Delayed waitBeforeShow={3000}><p> <input type="radio" onClick={() => this.props.setSet(2)}/> By changing the world</p></Delayed>
-		    <Delayed waitBeforeShow={4000}><p> <input type="radio" onClick={() => this.props.setSet(0)}/> Like an average person</p></Delayed>
+		     <p><Button variant='contained' onClick={() => this.props.setSet(2)}> By becoming fucking rich</Button></p>
+                    <Delayed waitBeforeShow={1000}><p><Button variant='contained' onClick={() => this.props.setSet(2)}> By becoming the best of the best</Button></p></Delayed>
+                    <Delayed waitBeforeShow={2000}><p><Button variant='contained' onClick={() => this.props.setSet(2)}> Like a fucking BOSS</Button></p></Delayed>
+                    <Delayed waitBeforeShow={3000}><p><Button variant='contained' onClick={() => this.props.setSet(2)}> By changing the world</Button></p></Delayed>
+		    <Delayed waitBeforeShow={4000}><p><Button variant='contained' onClick={() => this.props.setSet(0)}> Like an average person</Button></p></Delayed>
 		</div>
 	     </Delayed>
             </div>

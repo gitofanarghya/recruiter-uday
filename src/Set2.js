@@ -3,6 +3,7 @@ import Typing from 'react-typing-animation';
 import Sound from 'react-sound';
 import soundfile from './transcript.mp3';
 import Delayed from './Delayed';
+import {Button} from '@material-ui/core'
 
 class Set2 extends React.Component{
     render(){
@@ -21,8 +22,8 @@ class Set2 extends React.Component{
 			<Typing><p>Are you willing to do anything for it?</p></Typing>
                     <Delayed waitBeforeShow={3000}>
                         
-                        <p> <input type="radio" onClick={() => this.props.setSet(3)}/> Yes</p>
-                        <p> <input type="radio" onClick={() => this.props.setSet(0)}/> No</p>
+                        <p> <Button variant='contained' onClick={() => this.props.setSet(3)}> Yes </Button></p>
+                        <p> <Button variant='contained' onClick={() => this.props.setSet(0)}> No </Button></p>
                     </Delayed>
             </div>
         );
